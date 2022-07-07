@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0!important;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: calc(100% - 80px);
+    position: absolute;
+    right: 0;
+}
+
+
+
+/* Tema */
+
+* {
+    color: var(--color-text-primary);
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+#sidebar {
+    background-color: var(--bg-menu);
+}
+
+.bg-box-1 {
+    background-color: var(--bg-box-1);
+}
+
+.bg-btn-1 {
+    background-color: var(--bg-btn-1);
+    color: var(--color-text-primary);
+}
+
+.bg-btn-2 {
+    background-color: var(--bg-btn-2);
+    color: var(--color-text-primary);
+}

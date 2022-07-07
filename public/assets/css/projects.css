@@ -1,0 +1,9 @@
+.carousel-img {
+    max-width: 390px;
+    transform: translateX(0) scale(1);
+}
+
+.carrossel:hover .carousel-img {
+    transition: transform 0.5s;
+    transform: translateY(-8px) scale(1.05);
+}

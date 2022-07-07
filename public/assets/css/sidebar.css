@@ -1,0 +1,17 @@
+#sidebar {
+    width: 80px;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.items-sidebar-end {
+    display: none;
+}
+
+.items-sidebar:hover, .item-menu-start:hover, .item-menu-end:hover {
+    background-color: var(--bg-menu-selected-1);
+}
+
+.items-sidebar, .item-menu-start, .item-menu-end {
+    cursor: pointer;
+}
