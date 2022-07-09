@@ -1,17 +1,35 @@
 #sidebar {
-    width: 80px;
+    width: 65px;
     z-index: 999;
     transition: 0.3s;
+    box-shadow: 1px 0px 5px 0px grey;
+}
+
+.items-sidebar, .btn-menu-show, .btn-menu-theme {
+    cursor: pointer;
+}
+
+.items-sidebar:hover, .btn-menu-show:hover, .btn-menu-theme:hover {
+    background-color: var(--bg-menu-selected-1);
+}
+
+.btn-menu-show, .btn-menu-theme {
+    height: 48px;
+}
+
+.items-sidebar-start {
+    height: 32px;
 }
 
 .items-sidebar-end {
     display: none;
+    color: white;
 }
 
-.items-sidebar:hover, .item-menu-start:hover, .item-menu-end:hover {
+.sidebar-selected { /* Selecionar item do menu */
     background-color: var(--bg-menu-selected-1);
 }
 
-.items-sidebar, .item-menu-start, .item-menu-end {
-    cursor: pointer;
+.sidebar-unselected { /* desseleciona item do menu */
+    background-color: transparent;
 }

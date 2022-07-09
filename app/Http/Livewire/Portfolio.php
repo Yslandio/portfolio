@@ -26,9 +26,9 @@ class Portfolio extends Component
 
 
     public $all_projects = [
-        '{"name" : "PROJETO TESTE 1", "technologies" : ["HTML", "CSS", "JavaScript", "Bootstrap"], "description" : "Descrição do projeto", "images" : ["projeto1_img_1.png", "projeto1_img_2.png", "projeto1_img_2.png"], "github" : "", "replit" : ""}',
-        '{"name" : "PROJETO TESTE 2", "technologies" : ["HTML", "CSS", "JavaScript", "Bootstrap", "Laravel"], "description" : "Descrição do projeto", "images" : ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" : "", "replit" : ""}',
-        '{"name" : "PROJETO TESTE 3", "technologies" : ["HTML", "CSS", "JavaScript", "Bootstrap", "Jogo"], "description" : "Descrição do projeto", "images" : ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" : "", "replit" : ""}',
+        ["name" => "PROJETO TESTE 1", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap"], "description" => "Descrição do projeto", "images" => ["projeto1_img_1.png", "projeto1_img_2.png", "projeto1_img_2.png"], "github" => "", "replit" => ""],
+        ["name" => "PROJETO TESTE 2", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap", "Laravel"], "description" => "Descrição do projeto", "images" => ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" => "", "replit" => ""],
+        ["name" => "PROJETO TESTE 3", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap", "Jogo"], "description" => "Descrição do projeto", "images" => ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" => "", "replit" => ""],
     ];
 
     public $projects;
@@ -43,28 +43,14 @@ class Portfolio extends Component
 
     public function filterProjects()
     {
-        $this->search = strtoupper($this->search);
-        $projects = [];
-        foreach ($this->all_projects as $all_project) {
-            $project = json_decode($all_project);
-            if ($this->technology == '') {
-                if ($this->search == '') {
-                    $projects[] = $all_project;
-                }
-                elseif (strpos($project->name, $this->search)) {
-                    $projects[] = $all_project;
-                }
-            } else {
-                if ($this->search == '') {
-                    if (in_array($this->technology, $project->technologies)) {
-                        $projects[] = $all_project;
-                    }
-                } elseif (in_array($this->technology, $project->technologies) && strpos($project->name, $this->search)) {
-                    $projects[] = $all_project;
-                }
-            }
-        }
-        $this->projects = $projects;
+        $search =  $this->search;
+        $technology =  $this->technology;
+        $this->projects = collect($this->all_projects);
+        $this->projects = $this->projects->filter(function ($item) use ($technology) {
+                return $technology != '' ? in_array($technology, $item['technologies']) : true;
+            })->filter(function ($item) use ($search) {
+                return stripos($item['name'], $search) !== false;
+            });
     }
 
 

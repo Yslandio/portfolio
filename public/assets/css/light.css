@@ -1,10 +1,12 @@
 :root {
-    --color-text-primary: #000000;
+    --color-text-1: #000000;
+    --color-text-2: #ffffff;
     --bg-body: #ffffff;
-    --bg-menu: #999999;
-    --bg-menu-selected-1: rgba(0, 148, 255, 0.5);
-    --bg-menu-selected-2: rgba(255, 123, 0, 0.5);
+    --bg-menu: #52a9c4;
+    /* --bg-menu: #303030; */
+    --bg-menu-selected-1: rgba(255, 123, 0, 0.70);
+    --bg-menu-selected-2: rgba(0, 148, 255, 0.5);
     --bg-box-1: rgb(170, 170, 170);
-    --bg-btn-1: rgb(190, 190, 190);
-    --bg-btn-2: #004F88;
+    --bg-btn-1: rgb(140, 140, 140);
+    --bg-btn-2: #007fda;
 }

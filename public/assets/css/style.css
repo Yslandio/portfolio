@@ -26,7 +26,11 @@ main {
 /* Tema */
 
 * {
-    color: var(--color-text-primary);
+    color: var(--color-text-1);
+}
+
+input, option {
+    color: black;
 }
 
 body {
@@ -43,10 +47,18 @@ body {
 
 .bg-btn-1 {
     background-color: var(--bg-btn-1);
-    color: var(--color-text-primary);
+    color: var(--color-text-1);
 }
 
 .bg-btn-2 {
     background-color: var(--bg-btn-2);
-    color: var(--color-text-primary);
+    color: var(--color-text-1);
+}
+
+.bg-btn-1:hover, .bg-btn-2:hover, .color-text-2 {
+    color: var(--color-text-2);
+}
+
+.color-text-1 {
+    color: var(--color-text-1);
 }

@@ -10,8 +10,6 @@
     </div>
 
     @forelse ($projects as $project)
-        @php $project = json_decode($project); @endphp
-
         <div class="col-auto py-3 rounded-2 bg-box-1 carrossel">
             <div class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -23,7 +21,7 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner carousel-img">
-                    @foreach ($project->images as $key => $image)
+                    @foreach ($project['images'] as $key => $image)
                         <div class="carousel-item active">
                             <img src="{{ asset('assets/images/projects/'.$image) }}" class="d-block w-100 border border-1 border-dark" alt="Imagem {{ $key + 1 }} do projeto">
                         </div>
@@ -41,13 +39,13 @@
                 </button>
             </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center mt-3 gap-2 w-100">
-                <h5 class="fw-bold">{{ $project->name }}</h5>
+                <h5 class="fw-bold">{{ $project['name'] }}</h5>
                 <button class="btn bg-btn-2 fw-bold show-project" wire:click="showProject({{ json_encode($project) }})">Ver Mais</button>
             </div>
         </div>
     @empty
         <div class="col-12 alert alert-danger">
-            <h5 class="text-center">Nenhum projeto encontrado!</h5>
+            <h5 class="text-center text-black">Nenhum projeto encontrado!</h5>
         </div>
     @endforelse
 </div>
