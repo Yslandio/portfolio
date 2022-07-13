@@ -32,10 +32,8 @@ class Portfolio extends Component
 
 
     public $all_projects = [
-        ["name" => "PROJETO TESTE 1", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap"], "description" => "Descrição do projeto PROJETO TESTE 1.", "images" => ["projeto1_img_1.png", "projeto1_img_2.png", "projeto1_img_2.png"], "github" => "", "replit" => ""],
-        ["name" => "PROJETO TESTE 2", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap", "Laravel"], "description" => "Descrição do projeto PROJETO TESTE 2.", "images" => ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" => "", "replit" => ""],
-        ["name" => "PROJETO TESTE 3", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap", "Jogo"], "description" => "Descrição do projeto PROJETO TESTE 3.", "images" => ["projeto2_img_1.png", "projeto2_img_2.png", "projeto2_img_2.png"], "github" => "", "replit" => ""],
-    ]; // Banco de dados improvisado
+        ["name" => "sg-estagio", "technologies" => ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"], "images" => ["sg-estagio-1.png", "sg-estagio-2.png", "sg-estagio-3.png"], "github" => "https://github.com/Yslandio/sg-estagio", "replit" => "https://sg-estagio.yslandiode.repl.co/", "description" => "Este projeto tem como proposta facilitar o trabalho dos servidores que fazem a gerência do cadastro de estágios. Para isso, por meio deste sistema é possível realizar o cálculo de horas necessárias para especificar o período de execução do estágio."],
+    ]; // Banco de dados dos projetos
 
     public $projects;
 
