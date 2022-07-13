@@ -1,3 +1,1 @@
-// Procfile
-web: vendedor /bin/ heroku-php-apache2 /public
-
+web: vendedor/bin/heroku-php-apache2/public
