@@ -1,9 +1,14 @@
-.carousel-img {
+.project-img {
     max-width: 390px;
     transform: translateX(0) scale(1);
+    border: 2px solid black;
 }
 
-.carrossel:hover .carousel-img {
+.project:hover .project-img {
     transition: transform 0.5s;
     transform: translateY(-8px) scale(1.05);
+}
+
+.project:hover {
+    box-shadow: 2px 2px 5px 0 var(--bg-box-hover-1);
 }

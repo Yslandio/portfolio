@@ -3,7 +3,7 @@
         <h1 class="col-12 col-xl-10 col-xxl-9 px-2 px-lg-5">Seja bem-vindo(a) ao meu portfólio!</h1>
     </div>
     <div class="col-12 col-md-6 py-5">
-        <h2 class="col-12 px-2 px-lg-5 text-end">Meu nome é <b>Yslândio de Souza Cruz</b> e sou um progamador júnior.
+        <h2 class="col-12 px-2 px-lg-5 text-end">Meu nome é <b>Yslândio de Souza Cruz</b> e sou um progamador Full Stack.
         </h2>
     </div>
 </div>

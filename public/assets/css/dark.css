@@ -4,8 +4,12 @@
     --bg-body: #1E1E1E;
     --bg-menu: #303030;
     --bg-menu-selected-1: rgba(0, 148, 255, 0.5);
-    --bg-menu-selected-2: rgba(255, 123, 0, 0.7);
     --bg-box-1: #303030;
+    --bg-box-hover-1: #036ab4;
     --bg-btn-1: rgba(217, 217, 217, 0.2);
     --bg-btn-2: #004F88;
+    --bg-btn-hover-1: #007fda;
+
+    --bg-scrollbar-1: #303030;
+    --bg-scrollbar-2: #0095ff;
 }

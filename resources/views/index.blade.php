@@ -29,9 +29,6 @@
 <body class="h-100">
     @livewire('portfolio')
 
-    <!-- Scripts -->
-    <script src="{{ asset('assets/js/sidebar.js') }}"></script>
-
     <!-- Livewire -->
     @livewireScripts
 

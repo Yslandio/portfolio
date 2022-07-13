@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/light.css') }}">
     @endif
 
-    <nav class="position-fixed h-100 d-flex flex-wrap align-content-between" id="sidebar">
+    <nav class="position-fixed h-100 d-flex flex-wrap align-content-between sidebar @if($sidebar_show) sidebar-show @else sidebar-hidden @endif">
         @include('components.sidebar')
     </nav>
 

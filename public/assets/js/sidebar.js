@@ -1,3 +1,5 @@
+//  NÃO ESTÁ SENDO UTILIZADO ESSE ARQUIVO!
+
 function showMenu() { // Maximiza o menu
     $(window).width() < 400
         ? $("#sidebar").attr('style', 'width: 100%')

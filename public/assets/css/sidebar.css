@@ -1,35 +1,72 @@
-#sidebar {
-    width: 65px;
-    z-index: 999;
+.sidebar { /* Menu lateral */
+    z-index: 9999;
     transition: 0.3s;
     box-shadow: 1px 0px 5px 0px grey;
 }
 
-.items-sidebar, .btn-menu-show, .btn-menu-theme {
-    cursor: pointer;
+.sidebar-show, .sidebar:hover { /* Largura do menu aberto */
+    width: 350px !important;
+}
+.sidebar:hover .sidebar-text, .sidebar:hover .btn-menu-theme { /* Exibe os itens a direita no menu */
+    display: block !important;
 }
 
-.items-sidebar:hover, .btn-menu-show:hover, .btn-menu-theme:hover {
-    background-color: var(--bg-menu-selected-1);
+.sidebar-hidden { /* Largura do menu fechado */
+    width: 65px !important;
 }
 
-.btn-menu-show, .btn-menu-theme {
+.btn-menu-show, .btn-menu-theme { /* Tamanho dos ícones do topo do menu */
     height: 48px;
 }
-
-.items-sidebar-start {
+.items-sidebar-start { /* Tamanho dos ícones do meio e parte inferior do menu */
     height: 32px;
 }
 
-.items-sidebar-end {
-    display: none;
-    color: white;
+.items-sidebar, .btn-menu-show, .btn-menu-theme { /* Exibe o cursor como ponteiro nas opções do menu */
+    cursor: pointer;
+}
+.items-sidebar:hover, .btn-menu-show:hover, .btn-menu-theme:hover { /* Alterar a cor da opção no menu quando a seta do mouse estiver em cima */
+    background-color: var(--bg-menu-selected-1) !important;
 }
 
-.sidebar-selected { /* Selecionar item do menu */
+.sidebar-show .btn-menu-show, .sidebar-selected { /* Altera a cor do ítem selecionado no menu */
     background-color: var(--bg-menu-selected-1);
 }
-
-.sidebar-unselected { /* desseleciona item do menu */
+.sidebar-hidden .btn-menu-show, .sidebar-unselected { /* Remove a cor do ítem para desselecioná-lo no menu */
     background-color: transparent;
+}
+
+.items-sidebar, .btn-menu-show, .btn-menu-theme { /* Adiciona box-shadow em todos os ítens do menu */
+    box-shadow: 0 0 2px 0 white;
+}
+.items-sidebar { /* Arredondamento de bordas nos ítens do meio e inforiores do menu */
+    border-radius: 0 35px 0;
+    transition: 0.2s;
+}
+
+.btn-menu-show, .btn-menu-theme { /* Arredondamento de bordas nos ítens do topo do menu */
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+
+
+@media (max-width: 450px) {
+    .sidebar-show, .sidebar:hover { /* Largura do menu aberto */
+        width: 100% !important;
+    }
+    .sidebar-show .sidebar-text, .sidebar-show .btn-menu-theme { /* Exibe os itens a direita no menu */
+        display: block !important;
+    }
+
+    .sidebar-hidden, .sidebar-hidden:hover { /* Largura do menu fechado */
+        width: 65px !important;
+    }
+    .sidebar-hidden:hover .sidebar-text, .sidebar-hidden:hover .btn-menu-theme { /* Remove os itens a direita no menu */
+        display: none !important;
+    }
+
+    .sidebar-hidden .btn-menu-show { /* Remove a cor no ícone do menu para mostrar que está desbloqueado */
+        background-color: transparent !important;
+    }
 }

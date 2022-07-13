@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,8 +7,8 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-    margin: 0!important;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 !important;
 }
 
 a {
@@ -16,7 +16,7 @@ a {
 }
 
 main {
-    width: calc(100% - 80px);
+    width: calc(100% - 65px);
     position: absolute;
     right: 0;
 }
@@ -37,28 +37,64 @@ body {
     background-color: var(--bg-body);
 }
 
-#sidebar {
+.sidebar {
     background-color: var(--bg-menu);
 }
 
 .bg-box-1 {
     background-color: var(--bg-box-1);
+    box-shadow: 2px 2px 5px 0 black;
 }
 
 .bg-btn-1 {
     background-color: var(--bg-btn-1);
-    color: var(--color-text-1);
+    color: white !important;
 }
 
 .bg-btn-2 {
     background-color: var(--bg-btn-2);
-    color: var(--color-text-1);
+    color: white !important;
 }
 
 .bg-btn-1:hover, .bg-btn-2:hover, .color-text-2 {
-    color: var(--color-text-2);
+    background-color: var(--bg-btn-hover-1);
 }
 
 .color-text-1 {
     color: var(--color-text-1);
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-scrollbar-2) var(--bg-scrollbar-1);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-scrollbar-1);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bg-scrollbar-2);
+    border-radius: 20px;
+    border: 3px solid var(--bg-scrollbar-1);
+}
+
+
+
+@media (max-width: 768px) { /* Controle de fonte para dispositivos menores */
+    h2 {
+        font-size: 16pt;
+    }
+    h3 {
+        font-size: 14pt;
+    }
+    h4, h5, h6, p {
+        font-size: 12pt;
+    }
 }

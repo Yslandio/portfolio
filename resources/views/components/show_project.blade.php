@@ -11,7 +11,7 @@
             </div>
             <div class="carousel-inner">
                 @foreach ($show_project['images'] as $key => $image)
-                    <div class="carousel-item active">
+                    <div class="carousel-item @if($loop->first) active @endif">
                         <img src="{{ asset('assets/images/projects/'.$image) }}" class="d-block w-100 border border-1 border-dark" alt="Imagem {{ $key + 1 }} do projeto">
                     </div>
                 @endforeach
@@ -38,6 +38,17 @@
 </div>
 
 <hr>
+
+<div class="row py-4">
+    <div>
+        <h3 class="fw-bold mb-2">Tecnologias</h3>
+        <h4 style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;
+            @foreach($show_project['technologies'] as $key => $technology)
+                {{ $technology }};&nbsp;
+            @endforeach
+        </h4>
+    </div>
+</div>
 
 <div class="row py-4">
     <div>
